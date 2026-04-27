@@ -7,8 +7,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 이 줄을 추가하여 배포 권한을 부여합니다.
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Node 24 사용 강제 설정
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+ # Node 24 사용 강제 설정
 
     steps:
       - name: Checkout
