@@ -1,0 +1,114 @@
+.ladder-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.player-input, .prize-input {
+  padding: 10px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  width: 120px;
+}
+
+.player-input:focus, .prize-input:focus {
+  outline: none;
+  border-color: #4dabf7;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #339af0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #228be6;
+}
+
+.ladder-svg {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.02);
+  margin: 20px 0;
+  overflow: visible;
+}
+
+.ladder-line {
+  stroke: #dee2e6;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.ladder-bar {
+  stroke: #dee2e6;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.path-line {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: drawPath 2s ease-in-out forwards;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes drawPath {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.player-label, .prize-label {
+  font-size: 14px;
+  font-weight: 700;
+  fill: #495057;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.player-label:hover {
+  fill: #339af0;
+  transform: translateY(-2px);
+}
+
+.result-overlay {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e7f5ff;
+  border-radius: 8px;
+  color: #1971c2;
+  font-weight: 700;
+}
