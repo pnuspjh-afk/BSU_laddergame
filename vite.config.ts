@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // GitHub Pages 배포를 위해 상대 경로로 설정
+  base: '/BSU_laddergame/', // GitHub 레포지토리 이름으로 설정
 })
